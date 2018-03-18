@@ -17,6 +17,7 @@
 		D82DDC26205DEC2000E115D6 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82DDC25205DEC2000E115D6 /* Models.swift */; };
 		D82DDC2A205DED6500E115D6 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82DDC28205DED6500E115D6 /* ObjectMapper.framework */; };
 		D82DDC2B205DED6500E115D6 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82DDC29205DED6500E115D6 /* SwiftyJSON.framework */; };
+		D8D2CBA5205DF7DE00804832 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D2CBA4205DF7DE00804832 /* Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		D82DDC25205DEC2000E115D6 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		D82DDC28205DED6500E115D6 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		D82DDC29205DED6500E115D6 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		D8D2CBA4205DF7DE00804832 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 		D82DDBF8205DE9AF00E115D6 = {
 			isa = PBXGroup;
 			children = (
+				D8D2CBA3205DF79100804832 /* Extensions */,
 				D82DDC04205DE9AF00E115D6 /* RecruitmentFramework */,
 				D82DDC0F205DE9AF00E115D6 /* RecruitmentFrameworkTests */,
 				D82DDC03205DE9AF00E115D6 /* Products */,
@@ -119,6 +122,14 @@
 				D82DDC1E205DEBB800E115D6 /* ObjectMapper.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8D2CBA3205DF79100804832 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D8D2CBA4205DF7DE00804832 /* Date.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D82DDC26205DEC2000E115D6 /* Models.swift in Sources */,
+				D8D2CBA5205DF7DE00804832 /* Date.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

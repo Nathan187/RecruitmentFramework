@@ -14,17 +14,25 @@ public struct structInterviewerModel : Mappable
 {
     public var interviewerName : String!
     public var overallRating : Int!
-    public var generalComments : Int!
+    public var generalComments : String!
     public var studentEmail : String!
     
     public init?(map:Map){}
+    
+    public init?(interviewername : String, overallrating : Int, generalcomments : String, studentemail : String)
+    {
+        self.interviewerName = interviewername
+        self.overallRating = overallrating
+        self.generalComments = generalcomments
+        self.studentEmail = studentemail
+    }
     
     public mutating func mapping(map:Map)
     {
         interviewerName <- map["interviewerName"]
         overallRating <- map["overallRating"]
         generalComments <- map["generalComments"]
-        generalComments <- map["studentEmail"]
+        studentEmail <- map["studentEmail"]
     }
 }
 
@@ -39,6 +47,19 @@ public struct structStudentModel : Mappable
     public var studentExpectedGraduationDate : Date!
     
     public init?(map:Map){}
+    
+    public init?(studentbase64image : String, studentfullname : String, studentemail : String,
+                 studentMajor : String, classstanding : String, gpa : Double, graduationdate : Date)
+    {
+        self.studentBase64Image = studentbase64image
+        self.studentFullName = studentfullname
+        self.studentEmail = studentemail
+        self.studentMajor = studentMajor
+        self.studentClassStanding = classstanding
+        self.studentGPA = gpa
+        self.studentExpectedGraduationDate = graduationdate
+    }
+    
     
     public mutating func mapping(map:Map)
     {
