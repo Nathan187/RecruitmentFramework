@@ -10,6 +10,9 @@ import Foundation
 
 public struct structFrameworkConstants{
     
+    //YOU NEED TO CREATE THE KEY IN EVERY PROJECT BEFORE MOVING IT HERE.  IT USES THE APPDELEGATE
+    //PROPERTIES TO CREATE THE KEY.  SO YOU'LL NEED TO GENERATE A KEY IN THE INTERVIEWER PROJECT
+    //AND THEN YOU'LL NEED TO CREATE A KEY IN THE STUDENT PROJECT AS WELL
     public static let dbSecondTestKey: [UInt8] = [105, 67, 92, 91, 11, 12, 85, 23, 72, 65, 21, 27, 120, 93, 65, 117, 0, 84, 72, 5, 85, 66, 82, 1, 16, 43, 55, 122, 4, 82, 92, 5, 67, 29, 24, 44]
     
     public static let dbInterviewerKey : [UInt8] = [105, 96, 118, 123, 59, 48, 101, 77, 108, 66, 17, 113, 92, 65, 84, 86, 4, 76, 72, 78, 20, 120, 100, 98, 82, 15, 1, 86, 18, 20, 25, 40, 100, 98, 76, 16]
