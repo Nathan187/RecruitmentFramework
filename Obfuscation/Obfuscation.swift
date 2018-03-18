@@ -13,8 +13,6 @@ public struct structConstants{
      static let dbKey: [UInt8] = [105, 67, 92, 91, 11, 12, 85, 23, 72, 65, 21, 27, 120, 93, 65, 117, 0, 84, 72, 5, 85, 66, 82, 1, 16, 43, 55, 122, 4, 82, 92, 5, 67, 29, 24, 44]
 }
 
-
-
 public class Obfuscator: Any {
     
     // MARK: - Variables
@@ -25,7 +23,7 @@ public class Obfuscator: Any {
     
     // MARK: - Initialization
     
-    init(withSalt salt: [AnyObject]) {
+    public init(withSalt salt: [AnyObject]) {
         self.salt = salt.description
     }
     
@@ -40,7 +38,7 @@ public class Obfuscator: Any {
      
      - returns: the obfuscated string in a byte array
      */
-    func bytesByObfuscatingString(string: String) -> [UInt8] {
+    public func bytesByObfuscatingString(string: String) -> [UInt8] {
         let text = [UInt8](string.utf8)
         let cipher = [UInt8](self.salt.utf8)
         let length = cipher.count
@@ -70,7 +68,7 @@ public class Obfuscator: Any {
      
      - returns: the original string
      */
-    func reveal(key: [UInt8]) -> String {
+    public func reveal(key: [UInt8]) -> String {
         let cipher = [UInt8](self.salt.utf8)
         let length = cipher.count
         
