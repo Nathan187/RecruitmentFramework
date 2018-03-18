@@ -18,6 +18,7 @@
 		D82DDC2A205DED6500E115D6 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82DDC28205DED6500E115D6 /* ObjectMapper.framework */; };
 		D82DDC2B205DED6500E115D6 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82DDC29205DED6500E115D6 /* SwiftyJSON.framework */; };
 		D8D2CBA5205DF7DE00804832 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D2CBA4205DF7DE00804832 /* Date.swift */; };
+		D8D2CBC8205E0E8000804832 /* Obfuscation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D2CBC7205E0E8000804832 /* Obfuscation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		D82DDC28205DED6500E115D6 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		D82DDC29205DED6500E115D6 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		D8D2CBA4205DF7DE00804832 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		D8D2CBC7205E0E8000804832 /* Obfuscation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obfuscation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		D82DDBF8205DE9AF00E115D6 = {
 			isa = PBXGroup;
 			children = (
+				D8D2CBC6205E0E7100804832 /* Obfuscation */,
 				D8D2CBA3205DF79100804832 /* Extensions */,
 				D82DDC04205DE9AF00E115D6 /* RecruitmentFramework */,
 				D82DDC0F205DE9AF00E115D6 /* RecruitmentFrameworkTests */,
@@ -130,6 +133,14 @@
 				D8D2CBA4205DF7DE00804832 /* Date.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D8D2CBC6205E0E7100804832 /* Obfuscation */ = {
+			isa = PBXGroup;
+			children = (
+				D8D2CBC7205E0E8000804832 /* Obfuscation.swift */,
+			);
+			path = Obfuscation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D82DDC26205DEC2000E115D6 /* Models.swift in Sources */,
+				D8D2CBC8205E0E8000804832 /* Obfuscation.swift in Sources */,
 				D8D2CBA5205DF7DE00804832 /* Date.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
