@@ -2,6 +2,21 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Carthage/Checkouts/BonMot/BonMot.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/DynamicBlurView/DynamicBlurView.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/SVProgressHUD/SVProgressHUD.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/SAMKeychain/SAMKeychain.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/Alamofire/Alamofire.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Carthage/Checkouts/SwiftyJSON/SwiftyJSON.xcodeproj">
    </FileRef>
    <FileRef
