@@ -8,7 +8,7 @@
 
 import Foundation
 import PopupDialog
-
+import SVProgressHUD
 
 public class LoginRelated {
     
@@ -43,6 +43,11 @@ public class LoginRelated {
                 //make call to authenticate and send data
                 print("make call to server")
                 print(vc.txtUsername)
+                
+                let authVC = popup.viewController as! AuthenticateViewController
+                authVC.delegate?.AddRemoveCredentials(store: authVC.swSaveCredentials.isOn)
+                
+                //SVProgressHUD.show(withStatus: "Uploading Data")
             }
             
             // Add buttons to dialog

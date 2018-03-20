@@ -8,6 +8,10 @@
 
 import UIKit
 
+public protocol AuthenticateViewControllerDelegate : class  {
+    func AddRemoveCredentials(store : Bool)
+}
+
 public class AuthenticateViewController: UIViewController {
 
     @IBOutlet weak var lblTitle: UILabel!
@@ -15,6 +19,8 @@ public class AuthenticateViewController: UIViewController {
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var swSaveCredentials: UISwitch!
     @IBOutlet weak var lblSaveCredentials: UILabel!
+    
+    public weak var delegate : AuthenticateViewControllerDelegate?
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +33,13 @@ public class AuthenticateViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // Provide functions to update view
+    public func set(username text: String) {
+        self.txtUsername.text = text
+    }
+    public func set(password text: String) {
+        self.txtPassword.text = text
+    }
 
     /*
     // MARK: - Navigation
