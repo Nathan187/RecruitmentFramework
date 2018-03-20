@@ -9,7 +9,7 @@
 import UIKit
 
 public protocol AuthenticateViewControllerDelegate : class  {
-    func AddRemoveCredentials(store : Bool)
+    func AddRemoveCredentials(store : Bool, username : String, password : String)
 }
 
 public class AuthenticateViewController: UIViewController {

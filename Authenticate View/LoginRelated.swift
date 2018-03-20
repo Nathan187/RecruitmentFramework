@@ -45,7 +45,9 @@ public class LoginRelated {
                 print(vc.txtUsername)
                 
                 let authVC = popup.viewController as! AuthenticateViewController
-                authVC.delegate?.AddRemoveCredentials(store: authVC.swSaveCredentials.isOn)
+                authVC.delegate?.AddRemoveCredentials(store: authVC.swSaveCredentials.isOn,
+                                                      username : vc.txtUsername.text!.trimmingCharacters(in: .whitespacesAndNewlines),
+                                                      password :vc.txtPassword.text!.trimmingCharacters(in: .whitespacesAndNewlines))
                 
                 //SVProgressHUD.show(withStatus: "Uploading Data")
             }

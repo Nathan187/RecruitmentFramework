@@ -31,6 +31,7 @@
 		D82DDC2B205DED6500E115D6 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82DDC29205DED6500E115D6 /* SwiftyJSON.framework */; };
 		D8D2CBA5205DF7DE00804832 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D2CBA4205DF7DE00804832 /* Date.swift */; };
 		D8D2CBC8205E0E8000804832 /* Obfuscation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D2CBC7205E0E8000804832 /* Obfuscation.swift */; };
+		D8F6446F2061C5AA00271C36 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F6446E2061C5AA00271C36 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		D82DDC29205DED6500E115D6 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		D8D2CBA4205DF7DE00804832 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		D8D2CBC7205E0E8000804832 /* Obfuscation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obfuscation.swift; sourceTree = "<group>"; };
+		D8F6446E2061C5AA00271C36 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +106,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		97F6A82C206138CE002DD420 /* Obtain Token */ = {
+		97F6A82C206138CE002DD420 /* Authenticate View */ = {
 			isa = PBXGroup;
 			children = (
 				97F6A83D2061418E002DD420 /* AuthenticateViewController.swift */,
@@ -113,13 +115,13 @@
 				97F6A82F206139B8002DD420 /* NotConnected.xib */,
 				97F6A83120613A65002DD420 /* LoginRelated.swift */,
 			);
-			path = "Obtain Token";
+			path = "Authenticate View";
 			sourceTree = "<group>";
 		};
 		D82DDBF8205DE9AF00E115D6 = {
 			isa = PBXGroup;
 			children = (
-				97F6A82C206138CE002DD420 /* Obtain Token */,
+				97F6A82C206138CE002DD420 /* Authenticate View */,
 				D8D2CBC6205E0E7100804832 /* Obfuscation */,
 				D8D2CBA3205DF79100804832 /* Extensions */,
 				D82DDC04205DE9AF00E115D6 /* RecruitmentFramework */,
@@ -145,6 +147,7 @@
 				D82DDC06205DE9AF00E115D6 /* Info.plist */,
 				D82DDC25205DEC2000E115D6 /* Models.swift */,
 				97F6A82720613487002DD420 /* Utility.swift */,
+				D8F6446E2061C5AA00271C36 /* Constants.swift */,
 			);
 			path = RecruitmentFramework;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				97F6A83220613A65002DD420 /* LoginRelated.swift in Sources */,
 				D8D2CBC8205E0E8000804832 /* Obfuscation.swift in Sources */,
 				D8D2CBA5205DF7DE00804832 /* Date.swift in Sources */,
+				D8F6446F2061C5AA00271C36 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
