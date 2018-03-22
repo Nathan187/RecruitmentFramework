@@ -9,7 +9,48 @@
 import Foundation
 import ObjectMapper
 
-
+open class ISODateTransform: TransformType {
+    public typealias Object = Date
+    public typealias JSON = String
+    
+    public init() {}
+    
+    public func transformFromJSON (_ value: Any?) -> Date? {
+        
+        guard let datestring = value as? String else { return nil }
+        
+        //Not sure what's goin on with the json.  Sometimes in the
+        //date/time field, there is a '.' and sometimes not.
+        //Look for both before returning the transformed date
+        
+        let dateFormat1 = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+        let dateFormat2 = "yyyy-MM-dd'T'HH:mm:ss"
+        //datestring    String    "2016-06-28T17:23:35.203"
+        
+        if let k = Date(fromString: datestring, format: .custom(dateFormat1))
+        {
+            return k
+        }
+        
+        if let k = Date(fromString: datestring, format: .custom(dateFormat2))
+        {
+            return k
+        }
+        
+        return nil
+        
+        //let isoFormatter = ISO8601DateFormatter()
+        //let date = isoFormatter.date(from: datestring)!
+        //return date
+    }
+    
+    public func transformToJSON(_ value: Date?) -> String? {
+        let isoFormatter = ISO8601DateFormatter()
+        let string = isoFormatter.string(from: value!)
+        
+        return string
+    }
+}
 public struct structInterviewerModel : Mappable
 {
     public var interviewerName : String!
@@ -37,7 +78,7 @@ public struct structInterviewerModel : Mappable
         generalComments <- map["generalComments"]
         studentEmail <- map["studentEmail"]
         school <- map["school"]
-        date <- map["date"]
+        date <- (map["date"], ISODateTransform())
     }
 }
 
@@ -74,7 +115,7 @@ public struct structStudentModel : Mappable
         studentMajor <- map["studentMajor"]
         studentClassStanding <- map["studentClassStanding"]
         studentGPA <- map["studentGPA"]
-        studentExpectedGraduationDate <- map["studentExpectedGraduationDate"]
+        studentExpectedGraduationDate <- (map["studentExpectedGraduationDate"], ISODateTransform())
     }
 }
 
