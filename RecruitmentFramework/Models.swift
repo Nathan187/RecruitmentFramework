@@ -15,6 +15,7 @@ open class ISODateTransform: TransformType {
     
     public init() {}
     
+    /*
     public func transformFromJSON (_ value: Any?) -> Date? {
         
         guard let datestring = value as? String else { return nil }
@@ -49,6 +50,22 @@ open class ISODateTransform: TransformType {
         let string = isoFormatter.string(from: value!)
         
         return string
+    }
+ 
+     */
+    
+    public func transformFromJSON(_ value: Any?) -> Date? {
+        guard let datestring = value as? String else {return nil}
+        
+        if let k = Date(fromString: datestring, format: .isoDateTime){
+            return k
+        }
+        
+        return nil
+    }
+    
+    public func transformToJSON(_ value: Date?) -> String? {
+        return value!.toString(format: .isoDateTime)
     }
 }
 public struct structInterviewerModel : Mappable
