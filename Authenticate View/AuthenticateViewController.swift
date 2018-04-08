@@ -1,12 +1,6 @@
-//
-//  AuthenticateViewController.swift
-//  RecruitmentFramework
-//
-//  Created by mobiledeveloper on 3/20/18.
-//  Copyright © 2018 Oxy. All rights reserved.
-//
-
+import Foundation
 import UIKit
+import BonMot
 
 public protocol AuthenticateViewControllerDelegate : class  {
     func AddRemoveCredentials(store : Bool, username : String, password : String)
@@ -27,6 +21,16 @@ public class AuthenticateViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        var itms : [Composable] = []
+        let styleHeader = StringStyle(.font(UIFont(name: "AvenirNext-Bold", size: 14)!), .color(.black))
+        let styleDetail = StringStyle(.font(UIFont(name: "AvenirNext-Medium", size: 12.5)!), .color(.black))
+        
+        itms.append("Authenticate\n\n".styled(with: styleHeader))
+        itms.append("Please enter your network credentials before proceeding.  This operation is idempotent.  You can perform a sync repeatedly.".styled(with: styleDetail))
+        
+        lblTitle.attributedText = NSAttributedString.composed(of: itms)
+        lblSaveCredentials.attributedText = "Remember Credentials".styled(with: styleDetail)
+         
     }
 
     public override func didReceiveMemoryWarning() {
@@ -47,6 +51,10 @@ public class AuthenticateViewController: UIViewController {
         self.swSaveCredentials.isOn = value
     }
 
+    public func set(messageBySwitch attrString : NSAttributedString)
+    {
+        self.lblSaveCredentials.attributedText = attrString
+    }
     /*
     // MARK: - Navigation
 
