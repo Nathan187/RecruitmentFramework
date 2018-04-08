@@ -40,14 +40,17 @@ public class LoginRelated {
             let buttonAuthenticate = DefaultButton(title: "PROCEED") {
                 
                 let authVC = popup.viewController as! AuthenticateViewController
+                authVC.delegate?.ShowAuthenticateWindow(options: nil)
+                print("make call to server")
+                
                 authVC.delegate?.AddRemoveCredentials(store: authVC.swSaveCredentials.isOn,
                                                       username : vc.txtUsername.text!.trimmingCharacters(in: .whitespacesAndNewlines),
                                                       password :vc.txtPassword.text!.trimmingCharacters(in: .whitespacesAndNewlines))
                 
                 
                 //make call to authenticate and send data
-                print("make call to server")
-                authVC.delegate?.UploadDataToServer(options: nil)
+                
+                
                 
             }
             

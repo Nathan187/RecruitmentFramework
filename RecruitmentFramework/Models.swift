@@ -151,4 +151,26 @@ public struct structAccountModel : Mappable
     }
 }
 
+struct structUserFromAPIModel : Mappable {
+    
+    var displayname : String!
+    var username : String!
+    var accesstoken : String!
+    
+    init?(map: Map) {}
+    
+    init(displayname : String, username : String, accesstoken : String?)
+    {
+        self.displayname = displayname
+        self.username = username
+        self.accesstoken = accesstoken
+    }
+    
+    mutating func mapping(map: Map) {
+        displayname     <- map["displayname"]
+        username  <- map["username"]
+        accesstoken  <- map["accesstoken"]
+    }
+}
+
 

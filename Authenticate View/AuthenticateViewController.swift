@@ -4,7 +4,7 @@ import BonMot
 
 public protocol AuthenticateViewControllerDelegate : class  {
     func AddRemoveCredentials(store : Bool, username : String, password : String)
-    func UploadDataToServer(options : [String:AnyObject]?)
+    func ShowAuthenticateWindow(options : [String:AnyObject]?)
 }
 
 public class AuthenticateViewController: UIViewController {
