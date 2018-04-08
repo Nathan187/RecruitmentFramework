@@ -34,7 +34,11 @@ public class LoginRelated {
             })
             
             // Create first button
-            let buttonCancel = CancelButton(title: "CANCEL") {}
+            let buttonCancel = CancelButton(title: "CANCEL")
+            {
+                let authVC = popup.viewController as! AuthenticateViewController
+                authVC.delegate?.UserCancelledSyncOperation()
+            }
             
             // Create second button
             let buttonAuthenticate = DefaultButton(title: "PROCEED") {
