@@ -1,4 +1,4 @@
-github "Alamofire/Alamofire" "4.7.0"
+github "Alamofire/Alamofire" "4.7.1"
 github "Hearst-DD/ObjectMapper" "3.1.0"
 github "KyoheiG3/DynamicBlurView" "2.0.2"
 github "Orderella/PopupDialog" "0.7.1"

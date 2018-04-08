@@ -10,6 +10,7 @@ import UIKit
 
 public protocol AuthenticateViewControllerDelegate : class  {
     func AddRemoveCredentials(store : Bool, username : String, password : String)
+    func UploadDataToServer(options : [String:AnyObject]?)
 }
 
 public class AuthenticateViewController: UIViewController {
@@ -39,6 +40,11 @@ public class AuthenticateViewController: UIViewController {
     }
     public func set(password text: String) {
         self.txtPassword.text = text
+    }
+    
+    public func set(saveCredentialsValue value : Bool)
+    {
+        self.swSaveCredentials.isOn = value
     }
 
     /*

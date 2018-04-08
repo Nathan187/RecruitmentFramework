@@ -38,18 +38,17 @@ public class LoginRelated {
             
             // Create second button
             let buttonAuthenticate = DefaultButton(title: "PROCEED") {
-                //self.label.text = "Saved"
-                
-                //make call to authenticate and send data
-                print("make call to server")
-                print(vc.txtUsername)
                 
                 let authVC = popup.viewController as! AuthenticateViewController
                 authVC.delegate?.AddRemoveCredentials(store: authVC.swSaveCredentials.isOn,
                                                       username : vc.txtUsername.text!.trimmingCharacters(in: .whitespacesAndNewlines),
                                                       password :vc.txtPassword.text!.trimmingCharacters(in: .whitespacesAndNewlines))
                 
-                //SVProgressHUD.show(withStatus: "Uploading Data")
+                
+                //make call to authenticate and send data
+                print("make call to server")
+                authVC.delegate?.UploadDataToServer(options: nil)
+                
             }
             
             // Add buttons to dialog
