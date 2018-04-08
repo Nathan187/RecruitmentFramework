@@ -153,9 +153,9 @@ public struct structAccountModel : Mappable
 
 public struct structUserFromAPIModel : Mappable {
     
-    var displayname : String!
-    var username : String!
-    var accesstoken : String!
+    public var displayname : String!
+    public var username : String!
+    public var accesstoken : String!
     
     public init?(map: Map) {}
     
