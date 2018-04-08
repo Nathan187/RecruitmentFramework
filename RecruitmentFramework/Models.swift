@@ -151,13 +151,13 @@ public struct structAccountModel : Mappable
     }
 }
 
-struct structUserFromAPIModel : Mappable {
+public struct structUserFromAPIModel : Mappable {
     
     var displayname : String!
     var username : String!
     var accesstoken : String!
     
-    init?(map: Map) {}
+    public init?(map: Map) {}
     
     init(displayname : String, username : String, accesstoken : String?)
     {
@@ -166,7 +166,7 @@ struct structUserFromAPIModel : Mappable {
         self.accesstoken = accesstoken
     }
     
-    mutating func mapping(map: Map) {
+    public mutating func mapping(map: Map) {
         displayname     <- map["displayname"]
         username  <- map["username"]
         accesstoken  <- map["accesstoken"]

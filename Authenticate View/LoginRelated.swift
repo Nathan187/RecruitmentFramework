@@ -40,7 +40,15 @@ public class LoginRelated {
             let buttonAuthenticate = DefaultButton(title: "PROCEED") {
                 
                 let authVC = popup.viewController as! AuthenticateViewController
-                authVC.delegate?.ShowAuthenticateWindow(options: nil)
+                
+                //TODO:  check to see if they entered name and password.  if not, display validation message
+                /*if invalid entries
+                 {
+                 message
+                 } */
+                
+                authVC.delegate?.AttemptToAuthenticate(username: vc.txtUsername.text!.trimmingCharacters(in: .whitespacesAndNewlines),
+                                                       password: vc.txtPassword.text!.trimmingCharacters(in: .whitespacesAndNewlines), options: nil)
                 print("make call to server")
                 
                 authVC.delegate?.AddRemoveCredentials(store: authVC.swSaveCredentials.isOn,
