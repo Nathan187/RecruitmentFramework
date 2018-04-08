@@ -4,7 +4,7 @@ import BonMot
 
 public protocol AuthenticateViewControllerDelegate : class  {
     func AddRemoveCredentials(store : Bool, username : String, password : String)
-    func AttemptToAuthenticate(username : String, password:  String , options : [String:AnyObject]?)
+    func AttemptToAuthenticate(username : String, password:  String , saveTokenToDatabase: Bool, options : [String:AnyObject]?)
     func UserCancelledSyncOperation();
 }
 

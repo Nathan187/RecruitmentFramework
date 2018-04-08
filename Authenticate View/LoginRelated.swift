@@ -52,7 +52,9 @@ public class LoginRelated {
                  } */
                 
                 authVC.delegate?.AttemptToAuthenticate(username: vc.txtUsername.text!.trimmingCharacters(in: .whitespacesAndNewlines),
-                                                       password: vc.txtPassword.text!.trimmingCharacters(in: .whitespacesAndNewlines), options: nil)
+                                                       password: vc.txtPassword.text!.trimmingCharacters(in: .whitespacesAndNewlines),
+                                                       saveTokenToDatabase : vc.swSaveCredentials.isOn,
+                                                       options: nil)
                 print("make call to server")
                 
                 authVC.delegate?.AddRemoveCredentials(store: authVC.swSaveCredentials.isOn,
