@@ -173,4 +173,36 @@ public struct structUserFromAPIModel : Mappable {
     }
 }
 
+public struct structStudentModelV2 : Mappable
+{
+    public var studentname : String!
+    public var studentemail : String!
+    public var major : String!
+    public var gpa : String!
+    public var graduationdate : Date!
+    
+    public init?(map: Map) {}
+    
+    public mutating func mapping(map: Map) {
+        studentname <- map["studentname"]
+        studentemail <- map["studentemail"]
+        major <- map["major"]
+        gpa <- map["gpa"]
+        graduationdate <- map["graduationdate"]
+    }
+}
+
+
+public struct structStudentPicturesV2 : Mappable
+{
+    public var base64string : String!
+    public var studentemail : String!
+    
+    public init?(map: Map) {}
+    
+    public mutating func mapping(map: Map) {
+        base64string <- map["base64string"]
+        studentemail <- map["studentemail"]
+    }
+}
 
