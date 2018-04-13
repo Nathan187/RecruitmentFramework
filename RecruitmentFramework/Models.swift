@@ -183,6 +183,15 @@ public struct structStudentModelV2 : Mappable
     
     public init?(map: Map) {}
     
+    public init?(studentname : String, studentemail : String, major : String, gap : String, graduationdate : Date)
+    {
+        self.studentname = studentname
+        self.studentemail = studentemail
+        self.major = major
+        self.gpa = gap
+        self.graduationdate = graduationdate
+    }
+    
     public mutating func mapping(map: Map) {
         studentname <- map["studentname"]
         studentemail <- map["studentemail"]
@@ -199,6 +208,12 @@ public struct structStudentPicturesV2 : Mappable
     public var studentemail : String!
     
     public init?(map: Map) {}
+    
+    public init?(base64string : String, studentemail : String)
+    {
+        self.base64string = base64string
+        self.studentemail = studentemail
+    }
     
     public mutating func mapping(map: Map) {
         base64string <- map["base64string"]
