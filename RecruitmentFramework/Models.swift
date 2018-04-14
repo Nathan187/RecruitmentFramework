@@ -224,3 +224,22 @@ public struct structStudentPicturesV2 : Mappable
     }
 }
 
+public struct structStudentAndPictureDataV2 : Mappable
+{
+    public var studentdata : structStudentModelV2!
+    public var studentpicturedata : structStudentPicturesV2!
+    
+    public init?(map: Map) {}
+    
+    public init?(studentdata : structStudentModelV2, studentpicturedata : structStudentPicturesV2)
+    {
+        self.studentdata = studentdata
+        self.studentpicturedata = studentpicturedata
+    }
+    
+    public mutating func mapping(map: Map) {
+        studentdata <- map["studentdata"]
+        studentpicturedata <- map["studentpicturedata"]
+    }
+}
+
