@@ -180,16 +180,18 @@ public struct structStudentModelV2 : Mappable
     public var major : String!
     public var gpa : String!
     public var graduationdate : Date!
+    public var classification : String!
     
     public init?(map: Map) {}
     
-    public init?(studentname : String, studentemail : String, major : String, gap : String, graduationdate : Date)
+    public init?(studentname : String, studentemail : String, major : String, gap : String, graduationdate : Date, classification : String!)
     {
         self.studentname = studentname
         self.studentemail = studentemail
         self.major = major
         self.gpa = gap
         self.graduationdate = graduationdate
+        self.classification = classification
     }
     
     public mutating func mapping(map: Map) {
@@ -198,6 +200,7 @@ public struct structStudentModelV2 : Mappable
         major <- map["major"]
         gpa <- map["gpa"]
         graduationdate <- map["graduationdate"]
+        classification <- map["classification"]
     }
 }
 
