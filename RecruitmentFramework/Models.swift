@@ -179,12 +179,12 @@ public struct structStudentModelV2 : Mappable
     public var studentemail : String!
     public var major : String!
     public var gpa : String!
-    public var graduationdate : Date!
+    public var graduationdate : String!
     public var classification : String!
     
     public init?(map: Map) {}
     
-    public init?(studentname : String, studentemail : String, major : String, gap : String, graduationdate : Date, classification : String!)
+    public init?(studentname : String, studentemail : String, major : String, gap : String, graduationdate : String, classification : String!)
     {
         self.studentname = studentname
         self.studentemail = studentemail
