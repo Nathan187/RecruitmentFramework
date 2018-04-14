@@ -204,7 +204,7 @@ public struct structStudentModelV2 : Mappable
         gpa <- map["gpa"]
         graduationdate <- map["graduationdate"]
         classification <- map["classification"]
-        createdate <- map["createdate"]
+        createdate <- (map["createdate"], ISODateTransform())
     }
 }
 
